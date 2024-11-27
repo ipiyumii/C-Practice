@@ -44,14 +44,37 @@ class Program
         //     }
         // }
 
-        Console.WriteLine("Enter a number: ");
+        // Console.WriteLine("Enter a number: ");
+        // int number = Convert.ToInt32(Console.ReadLine());
+
+        // for(int i = 1 ; i <= number ; i++)
+        // {
+        //     // Console.WriteLine(i + " * " + number + " = " + i * number);
+        //     Console.WriteLine("{0} * {1} = {2}", i, number , i * number);
+        // } 
+
+        Console.WriteLine("Enter a number :");
         int number = Convert.ToInt32(Console.ReadLine());
 
-        for(int i = 1 ; i <= number ; i++)
+        for(int i = 1; i <= number; i++)
         {
-            // Console.WriteLine(i + " * " + number + " = " + i * number);
-            Console.WriteLine("{0} * {1} = {2}", i, number , i * number);
-        } 
+            if(i % 3 == 0 && i % 5 == 0)
+            {
+                Console.WriteLine("FizzBuzz");
+            }
+            else if(i % 3 == 0)
+            {
+                Console.WriteLine("Fizz");
+            }
+            else if(i % 5 == 0)
+            {
+                Console.WriteLine("Buzz");
+            }
+            else
+            {
+                Console.WriteLine(i);
+            }
+        }
 
     }
 }
