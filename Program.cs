@@ -76,41 +76,65 @@ class Program
         //     }
         // }
 
-        Console.WriteLine("Enter Password: ");
-        string password = Console.ReadLine();
+        // Console.WriteLine("Enter Password: ");
+        // string password = Console.ReadLine();
 
-        Console.WriteLine("Enter Conform Password: ");
-        string conform_password = Console.ReadLine();
+        // Console.WriteLine("Enter Conform Password: ");
+        // string conform_password = Console.ReadLine();
 
-        if(!password.Equals(string.Empty))
+        // if(!password.Equals(string.Empty))
+        // {
+        //     if(!conform_password.Equals(string.Empty))
+        //     {
+        //         if(password.Length >= 6 && conform_password.Length >=6)
+        //         {
+        //             if(password == conform_password)
+        //             {
+        //                 Console.WriteLine("password match");
+        //             }
+        //             else
+        //             {
+        //                 Console.WriteLine("password do not match");
+        //             }
+        //         }
+        //         else
+        //         {
+        //             Console.WriteLine("password must contain more than 6 characters");
+        //         }
+        //     } 
+        //     else
+        //     {
+        //         Console.WriteLine("please enter a password confirmation");
+        //     } 
+        // }
+        // else
+        // {
+        //     Console.WriteLine("please enter a password");
+        // }
+
+        List<int> even_list = new List<int>();
+        List<int> odd_list = new List<int>();
+
+        for(int i=0; i<20; i++)
         {
-            if(!conform_password.Equals(string.Empty))
+            if(i%2 == 0)
             {
-                if(password.Length >= 6 && conform_password.Length >=6)
-                {
-                    if(password == conform_password)
-                    {
-                        Console.WriteLine("password match");
-                    }
-                    else
-                    {
-                        Console.WriteLine("password do not match");
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("password must contain more than 6 characters");
-                }
-            } 
+                even_list.Add(i);
+            }
             else
             {
-                Console.WriteLine("please enter a password confirmation");
-            } 
-        }
-        else
-        {
-            Console.WriteLine("please enter a password");
+                odd_list.Add(i);
+            }
         }
 
+        foreach(int item in even_list)
+        {
+            Console.Write($"{item} ");
+        }
+
+        foreach(int item in odd_list)
+        {
+            Console.Write($"{item} ");
+        }
     }
 }
