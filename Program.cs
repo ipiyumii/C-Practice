@@ -24,5 +24,24 @@ class Program
         }
 
         Console.WriteLine("Correct answer!");
+
+
+        bool success = true;
+
+        while(success)
+        {
+            Console.WriteLine("Enter a number: ");
+            string numInput = Console.ReadLine();
+
+            if(int.TryParse(numInput, out int num))
+            {
+                Console.WriteLine(num);
+                success = false;
+            }
+            else 
+            {
+                Console.WriteLine("Failed to convert the number");
+            }
+        }
     }
 }
