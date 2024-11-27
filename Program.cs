@@ -49,7 +49,8 @@ class Program
 
         for(int i = 1 ; i <= number ; i++)
         {
-            Console.WriteLine(i + " * " + number + " = " + i * number);
+            // Console.WriteLine(i + " * " + number + " = " + i * number);
+            Console.WriteLine("{0} * {1} = {2}", i, number , i * number);
         } 
 
     }
