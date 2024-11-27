@@ -53,27 +53,63 @@ class Program
         //     Console.WriteLine("{0} * {1} = {2}", i, number , i * number);
         // } 
 
-        Console.WriteLine("Enter a number :");
-        int number = Convert.ToInt32(Console.ReadLine());
+        // Console.WriteLine("Enter a number :");
+        // int number = Convert.ToInt32(Console.ReadLine());
 
-        for(int i = 1; i <= number; i++)
+        // for(int i = 1; i <= number; i++)
+        // {
+        //     if(i % 3 == 0 && i % 5 == 0)
+        //     {
+        //         Console.WriteLine("FizzBuzz");
+        //     }
+        //     else if(i % 3 == 0)
+        //     {
+        //         Console.WriteLine("Fizz");
+        //     }
+        //     else if(i % 5 == 0)
+        //     {
+        //         Console.WriteLine("Buzz");
+        //     }
+        //     else
+        //     {
+        //         Console.WriteLine(i);
+        //     }
+        // }
+
+        Console.WriteLine("Enter Password: ");
+        string password = Console.ReadLine();
+
+        Console.WriteLine("Enter Conform Password: ");
+        string conform_password = Console.ReadLine();
+
+        if(!password.Equals(string.Empty))
         {
-            if(i % 3 == 0 && i % 5 == 0)
+            if(!conform_password.Equals(string.Empty))
             {
-                Console.WriteLine("FizzBuzz");
-            }
-            else if(i % 3 == 0)
-            {
-                Console.WriteLine("Fizz");
-            }
-            else if(i % 5 == 0)
-            {
-                Console.WriteLine("Buzz");
-            }
+                if(password.Length >= 6 && conform_password.Length >=6)
+                {
+                    if(password == conform_password)
+                    {
+                        Console.WriteLine("password match");
+                    }
+                    else
+                    {
+                        Console.WriteLine("password do not match");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("password must contain more than 6 characters");
+                }
+            } 
             else
             {
-                Console.WriteLine(i);
-            }
+                Console.WriteLine("please enter a password confirmation");
+            } 
+        }
+        else
+        {
+            Console.WriteLine("please enter a password");
         }
 
     }
