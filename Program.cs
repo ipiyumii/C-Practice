@@ -138,21 +138,46 @@ class Program
         // }
 
 
-        Console.WriteLine("Enter width: ");
-        int width = Convert.ToInt32(Console.ReadLine());
+        // Console.WriteLine("Enter width: ");
+        // int width = Convert.ToInt32(Console.ReadLine());
 
-        Console.WriteLine("Enter height: ");
-        int height = Convert.ToInt32(Console.ReadLine());
+        // Console.WriteLine("Enter height: ");
+        // int height = Convert.ToInt32(Console.ReadLine());
 
-        int result = calculate(width, height);
+        // int result = calculate(width, height);
 
-        Console.WriteLine($"result: {result}");
+        // Console.WriteLine($"result: {result}");
 
+
+        int[] numbers = new int[] { 1,2,3,4,5};
+
+        int result = calculateArray(numbers);
+
+        Console.WriteLine(result);
        
     }
 
-     static int calculate(int width, int height)
+    //  static int calculate(int width, int height)
+    //     {
+    //         return(width * height) / 2;
+    //     }
+
+    static int calculateArray(int[] numbers)
+    {   
+        int total = 0;
+
+        if(numbers.Length != 0)
         {
-            return(width * height) / 2;
+            for(int i = 0; i< numbers.Length; i++)
+            {
+                total += numbers[i];
+            }
+
+            return total;
         }
+        else
+        {
+            return -1;
+        }
+    }
 }
