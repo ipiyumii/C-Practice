@@ -112,29 +112,47 @@ class Program
         //     Console.WriteLine("please enter a password");
         // }
 
-        List<int> even_list = new List<int>();
-        List<int> odd_list = new List<int>();
+        // List<int> even_list = new List<int>();
+        // List<int> odd_list = new List<int>();
 
-        for(int i=0; i<20; i++)
-        {
-            if(i%2 == 0)
-            {
-                even_list.Add(i);
-            }
-            else
-            {
-                odd_list.Add(i);
-            }
-        }
+        // for(int i=0; i<20; i++)
+        // {
+        //     if(i%2 == 0)
+        //     {
+        //         even_list.Add(i);
+        //     }
+        //     else
+        //     {
+        //         odd_list.Add(i);
+        //     }
+        // }
 
-        foreach(int item in even_list)
-        {
-            Console.Write($"{item} ");
-        }
+        // foreach(int item in even_list)
+        // {
+        //     Console.Write($"{item} ");
+        // }
 
-        foreach(int item in odd_list)
-        {
-            Console.Write($"{item} ");
-        }
+        // foreach(int item in odd_list)
+        // {
+        //     Console.Write($"{item} ");
+        // }
+
+
+        Console.WriteLine("Enter width: ");
+        int width = Convert.ToInt32(Console.ReadLine());
+
+        Console.WriteLine("Enter height: ");
+        int height = Convert.ToInt32(Console.ReadLine());
+
+        int result = calculate(width, height);
+
+        Console.WriteLine($"result: {result}");
+
+       
     }
+
+     static int calculate(int width, int height)
+        {
+            return(width * height) / 2;
+        }
 }
